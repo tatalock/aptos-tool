@@ -9,7 +9,7 @@ importers:
   .:
     dependencies:
       '@aptos-labs/ts-sdk':
-        specifier: ^1.33.1
+        specifier: latest
         version: 1.33.1
       bignumber.js:
         specifier: ^9.1.2

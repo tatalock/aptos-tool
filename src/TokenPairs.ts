@@ -7,7 +7,7 @@ export enum OrderState {
   Desc = "desc",
 }
 
-class TokenPairs {
+export class TokenPairs {
   static AddressRegex = /0x[a-fA-F0-9]{1,64}/g;
 
   /**

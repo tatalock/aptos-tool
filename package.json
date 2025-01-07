@@ -1,9 +1,10 @@
 {
   "name": "aptos-tool",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "type": "module",
   "main": "index.ts",
+  "types": "./dist/types/src/index.d.ts",
   "scripts": {
     "dev": "tsc && vite build -w & pnpm vitest",
     "build": "tsc && vite build",
@@ -42,10 +43,10 @@
     "vitest": "^2.1.8"
   },
   "dependencies": {
-    "@aptos-labs/ts-sdk": "^1.33.1",
+    "@aptos-labs/ts-sdk": "latest",
     "bignumber.js": "^9.1.2"
   },
   "peerDependencies": {
-    "@aptos-labs/ts-sdk": ">=1.33.1"
+    "@aptos-labs/ts-sdk": "latest"
   }
 }

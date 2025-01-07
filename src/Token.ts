@@ -12,7 +12,7 @@ BigNumber.config({
   EXPONENTIAL_AT: [-20, 20],
 });
 
-class Token {
+export class Token {
   name: string = "";
   symbol: string = "";
   decimals: number = 8;
