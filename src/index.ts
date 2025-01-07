@@ -3,9 +3,11 @@ import Token from "./Token";
 import TokenPairs from "./TokenPairs";
 import * as Utils from "./utils";
 
-export default {
+const AptosTool = {
   Token,
   TokenPairs,
   Utils,
   Config,
 };
+
+export default AptosTool;
