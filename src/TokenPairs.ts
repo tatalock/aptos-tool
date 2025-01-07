@@ -98,5 +98,3 @@ export class TokenPairs {
   //   }
   // };
 }
-
-export default TokenPairs;

@@ -1,6 +1,5 @@
-import { expect } from "vitest";
-import { test } from "vitest";
-import TokenPairs from "../src/TokenPairs";
+import { expect, test } from "vitest";
+import { TokenPairs } from "../src/TokenPairs";
 
 // AddressRegex
 test(`TokenPairs AddressRegex: ${TokenPairs.AddressRegex}`, () => {

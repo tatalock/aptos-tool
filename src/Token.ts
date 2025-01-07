@@ -5,7 +5,7 @@ import {
 } from "@aptos-labs/ts-sdk";
 import BigNumber from "bignumber.js";
 import { APTOS_COIN_TYPE, USDT_DECIMALS } from "./config";
-import TokenPairs from "./TokenPairs";
+import { TokenPairs } from "./TokenPairs";
 import { StringToUint8Array } from "./utils";
 
 BigNumber.config({
@@ -269,5 +269,3 @@ export class Token {
     this.balance = 0;
   }
 }
-
-export default Token;
