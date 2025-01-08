@@ -10,6 +10,8 @@ export enum OrderState {
 export class TokenPairs {
   static AddressRegex = /0x[a-fA-F0-9]{1,64}/g;
 
+  static IsCoinToken = (type: string) => type?.split("::")?.length >= 3;
+
   /**
    * Converts the given address string to its long format representation.
    * This function processes an address string, converting it into a longer, typically more detailed format.
@@ -88,13 +90,46 @@ export class TokenPairs {
     return OrderState.None;
   };
 
-  // static TokenCheck = (tokenPair: Token[]) => {
-  //   if (tokenPair.length !== 2) {
-  //     throw new Error("token pair length should be 2");
-  //   }
+  /**
+   * Checks the type of token pair and returns the corresponding payload.
+   * This function determines which payload to return based on the types of tokens provided in the tokenPairType array.
+   * It uses the IsCoinToken method to check if each token is a coin.
+   *
+   * @param tokenPairType - An array containing two token types to be checked.
+   * @param payloads - An array containing four payloads, from which one is returned based on the token types.
+   * @returns The payload corresponding to the combination of token types.
+   */
+  static TokenPairTypeCheck = (tokenPairType: string[], payloads: any[]) => {
+    // Both fa
+    if (
+      !TokenPairs.IsCoinToken(tokenPairType[0]) &&
+      !TokenPairs.IsCoinToken(tokenPairType[1])
+    ) {
+      return payloads[0];
+    }
 
-  //   if (tokenPair.filter((token: any) => token.assetType).length !== 2) {
-  //     throw new Error("token pair should have assetType");
-  //   }
-  // };
+    // Both coin
+    if (
+      TokenPairs.IsCoinToken(tokenPairType[0]) &&
+      TokenPairs.IsCoinToken(tokenPairType[1])
+    ) {
+      return payloads[1];
+    }
+
+    //  coin and fa
+    if (
+      TokenPairs.IsCoinToken(tokenPairType[0]) &&
+      !TokenPairs.IsCoinToken(tokenPairType[1])
+    ) {
+      return payloads[2];
+    }
+
+    //  fa and coin
+    if (
+      !TokenPairs.IsCoinToken(tokenPairType[0]) &&
+      TokenPairs.IsCoinToken(tokenPairType[1])
+    ) {
+      return payloads[3];
+    }
+  };
 }
