@@ -1,5 +1,11 @@
 # aptos-tool
 
+## 0.0.6
+
+### Patch Changes
+
+- b667261: update configs
+
 ## 0.0.5
 
 ### Patch Changes
