@@ -17,9 +17,7 @@ export default defineConfig({
   },
   resolve: { alias: { src: resolve("src/") } },
   plugins: [
-    dts({
-      outDir: "dist",
-    }),
+    dts({}),
     terser({
       format: {
         comments: false,
