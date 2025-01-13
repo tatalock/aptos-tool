@@ -1,5 +1,11 @@
 # aptos-tool
 
+## 0.0.7
+
+### Patch Changes
+
+- a9c664f: update config
+
 ## 0.0.6
 
 ### Patch Changes
