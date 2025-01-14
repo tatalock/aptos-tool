@@ -1,5 +1,11 @@
 # aptos-tool
 
+## 0.0.8
+
+### Patch Changes
+
+- 29e5c21: update package.json
+
 ## 0.0.7
 
 ### Patch Changes
