@@ -1,5 +1,11 @@
 # aptos-tool
 
+## 0.0.10
+
+### Patch Changes
+
+- d7f3086: update package.json
+
 ## 0.0.9
 
 ### Patch Changes
