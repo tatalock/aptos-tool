@@ -1,5 +1,11 @@
 # aptos-tool
 
+## 0.0.11
+
+### Patch Changes
+
+- d78d29a: fix bignumber exponential
+
 ## 0.0.10
 
 ### Patch Changes
