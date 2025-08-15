@@ -3,7 +3,8 @@
   "version": "0.0.9",
   "description": "",
   "type": "module",
-  "main": "./dist/index.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
   "types": "./dist/src/index.d.ts",
   "scripts": {
     "dev": "tsc && vite build -w & pnpm vitest",
@@ -16,6 +17,8 @@
   },
   "exports": {
     ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     }
   },
