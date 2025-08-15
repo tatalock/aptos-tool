@@ -9,7 +9,7 @@ import { TokenPairs } from "./TokenPairs";
 import { StringToUint8Array } from "./utils";
 
 BigNumber.config({
-  EXPONENTIAL_AT: [-1e9, 1e9],
+  EXPONENTIAL_AT: 1e9,
 });
 
 export class Token {
